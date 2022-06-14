@@ -1,53 +1,50 @@
 <html>
 <body>
-	<h3>Income Prediction Form</h3>
 
-<div>
-<form action="/predict" method="POST">
-	<!-- <label for="category">Category</label>
-	<select id="category" name="category">
-	<option value="0">Alkoholunfälle</option>
-	<option value="1">Fluchtunfälle</option>
-	<option value="2">Verkehrsunfälle</option>
-	</select>
-	<br>
-	<label for="type">Type</label>
-	<select id="type" name="type">
-	<option value="0">Verletzte und Getötete</option>
-	<option value="1">insgesamt</option>
-	<option value="2">mit Personenschäden</option>
-	</select> -->
-	<br>
-	<!-- <label for="year">Year</label>
-	<select id="year" name="year">
-	<option value="0">2021</option>
-	<option value="1">2022</option>
-	<option value="2">2023</option>
-	</select> -->
-	<br>
-	<label for="month">Month</label>
-	<select id="month" name="month">
-	<option value="4">January</option>
-	<option value="3">February</option>
-	<option value="7">March</option>
-	<option value="0">April</option>
-	<option value="8">May</option>
-	<option value="6">June</option>
-	<option value="5">July</option>
-	<option value="1">August</option>
-	<option value="11">September</option>
-	<option value="10">October</option>
-	<option value="9">November</option>
-	<option value="2">December</option>
-	<option value="12">Whole Year</option>
-	</select>
-	<br>
-	<br>
-	<label for="year">Year</label>
-	<input type="text" id="year" name="year" placeholder="Enter a year after 2000">
-	<br>
-	<input type="submit" value="Submit">
-</form>
-</div>
+<div class="container">
+	<div class="row h-50">
+	  <div class="col">
+	  </div>
+	  <div class="col-6" style="background-color: rgba(255,0,0,0.1);"">
+		<div>
+			<h3>Enter the year and month</h3>
+			<form action="/predict" method="POST" id="form_data">
+				<label for="month">Month</label>
+				<select id="month" name="month" class="custom-select">
+				<option value="4">January</option>
+				<option value="3">February</option>
+				<option value="7">March</option>
+				<option value="0">April</option>
+				<option value="8">May</option>
+				<option value="6">June</option>
+				<option value="5">July</option>
+				<option value="1">August</option>
+				<option value="11">September</option>
+				<option value="10">October</option>
+				<option value="9">November</option>
+				<option value="2">December</option>
+				</select>
+				<br>
+				<br>
+				<label for="year" required>Year</label>
+				<input type="text" id="year" name="year" class="form-control" placeholder="Enter a year after 2000" required>
+				<br>
+				<input type="submit" class="btn btn-primary" value="Submit">
+			</form>
+			{% if prediction %}
+				<h3>Model returns : {{ prediction[0] }}</h3>
+			{% endif %}
+		</div>
+	  </div>
+	  <div class="col">
+	  </div>
+	</div>
+  </div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
 </body>
 </html>
+
