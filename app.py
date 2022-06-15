@@ -66,8 +66,8 @@ def predict():
     return render_template('home.html', prediction=value)
 
 
-@app.route('/json/', methods=['POST'])
-def json_example():
+@app.route('/json', methods=['POST'])
+def json():
     request_data = request.get_json()
     input=[request_data['month'], request_data['year']]
     # input[1] = request_data['year']
