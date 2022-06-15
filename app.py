@@ -63,7 +63,7 @@ def predict():
         value = value + prediction
     print(value)
 #     prediction = int(prediction.Label[0])
-    return render_template('home.html', prediction=np.int(value))
+    return render_template('home.html', prediction=np.int(value[0]))
 
 
 @app.route('/jsoninput', methods=['POST'])
