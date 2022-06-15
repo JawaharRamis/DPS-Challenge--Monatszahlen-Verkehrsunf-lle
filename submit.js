@@ -6,7 +6,7 @@ const URL = 'https://dps-challenge.netlify.app/.netlify/functions/api/challenge'
 const jsonBody = {
   github: 'https://github.com/JawaharRamis/DPS-Challenge--Monatszahlen-Verkehrsunf-lle/tree/master',
   email: 'jawaharramis@gmail.com',
-  url: 'https://dps-challenge-jawahar.herokuapp.com/json',
+  url: 'https://dps-challenge-jawahar.herokuapp.com/jsoninput',
   notes:
     'I have developed a simple UI running on flask server with a form to provide the input and return the model predictions at https://dps-challenge-jawahar.herokuapp.com.'+
     'The application is deployed on Heroku connected to the guthub repo to which Ihave added the requested files on to the master branch'
