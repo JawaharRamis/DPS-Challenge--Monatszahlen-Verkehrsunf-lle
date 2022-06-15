@@ -66,9 +66,11 @@ def predict():
     return render_template('home.html', prediction=value)
 
 
-@app.route('/json', methods=['POST'])
-def json():
+@app.route('/jsoninput', methods=['POST'])
+
+def jsoninput():
     request_data = request.get_json()
+    print(request_data)
     input=[request_data['month'], request_data['year']]
     # input[1] = request_data['year']
     # input[0] = request_data['month']
@@ -82,7 +84,7 @@ def json():
         value = value + prediction
     print(value)
     return jsonify(
-        prediction=value[0]
+        prediction=np.int(value[0])
     )
 
 if __name__ == '__main__':
