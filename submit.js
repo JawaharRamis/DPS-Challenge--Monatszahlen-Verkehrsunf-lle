@@ -13,7 +13,7 @@ const jsonBody = {
 };
 
 const password = hotpTotpGenerator.totp({
-  key: 'Prateek.sawhney97@gmail.comDPSCHALLENGE',
+  key: 'jawaharramis@gmail.comDPSCHALLENGE',
   X: 120,
   T0: 0,
   algorithm: 'sha512',
